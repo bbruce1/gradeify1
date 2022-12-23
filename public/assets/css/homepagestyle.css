@@ -1,0 +1,926 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family: 'Poppins', sans-serif;
+}
+html {
+	scroll-behavior: smooth;
+}
+span , a , h1 , h2 , h3 , h4 , h5 , p , label , input , select , ul , li, div  {
+	margin:0;
+	padding:0;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+header {
+	background: #fff;
+	padding: 20px 0;
+}
+.header_main {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.logo_main img {
+	width: 100%;
+}
+.header_main ul {
+	display: inline-flex;
+	align-items: center;	
+}
+.header_menu ul li {
+	margin: 0 25px;
+	list-style: none;
+}
+.header_menu ul li a {
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 30px;
+	color: #000000;
+	position: relative;
+	transition: .5s;
+}
+.header_menu ul li a:hover {
+	color: #4BB5D6;	
+}
+.header_menu ul li a:before {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	height: 2px;
+	width: 0;
+	transition: .5s;
+	background: #4BB5D6;
+}
+.header_menu ul li a:hover:before {
+	width: 100%;
+}
+.header_menu ul li.search_icon a:before {
+	display: none;
+}
+.login_main ul li {
+	margin-left: 10px;
+	list-style: none;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 30px;
+	color: #000000;
+}
+.login_main ul li a {
+	color: #000000;
+	text-decoration: none;
+}
+.search_icon {
+	color: #4BB5D6;
+}
+.search_icon a {
+	font-size: 18px;
+	color: #4BB5D6 !important; 	
+}
+.login_btn a {
+	border: 1px solid #4BB5D6;
+	color: #4BB5D6 !important;
+	background: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: .5s;
+}
+.login_btn a:hover {
+	border: 1px solid #4BB5D6;
+	color: #fff !important;
+	background: #4BB5D6;
+}
+.signup_btn a {
+	border: 1px solid #fff;
+	padding: 10px 20px;
+	background: #4BB5D6;
+	color: #fff !important;
+	border-radius: 5px;
+	transition: .5s;
+}
+.signup_btn a:hover {
+	border: 1px solid #4BB5D6;
+	color: #4BB5D6 !important;
+	background: #fff;
+}
+
+
+.banenr_main {
+	width: 100%;
+	height: 700px;
+	padding: 100px 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	background: url(../img/Banner_img.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.banenr_enner {
+	width: 50% !important;
+	color: #fff;
+}
+.banenr_enner h2 {
+	font-size: 40px;
+	font-weight: 400;
+}
+.heading_line {
+	margin: 30px 0;
+	background: #4BB5D6;
+	width: 100px;
+	height: 5px;
+	display: inline-block;
+}
+.banenr_enner p {
+	font-size: 15px;
+	font-weight: 200;
+	margin-bottom: 30px;
+}
+.banenr_enner button {
+	border: 1px solid #4BB5D6;
+	padding: 10px 20px;
+	background: #4BB5D6;
+	color: #fff !important;
+	border-radius: 5px;
+	transition: .5s;
+}
+.banenr_enner button:hover {
+	border: 1px solid #4BB5D6;
+	background: transparent;
+	color: #4BB5D6 !important;
+}
+
+
+.heading {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.key_features_main {
+	padding: 100px 0;
+	text-align: center;
+}
+.yellow_bg {
+	margin: 20px 0;
+	background: #FFC600;
+}
+.heading p {
+	width: 60%;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+.key_features_blog {
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.key_features_blog > div {
+	width: 30%;
+	margin: 20px 0;
+	padding: 20px;
+	text-align: center;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 260px;
+	border-radius: 10px;
+	background: #f1f1f1;
+	transition: .5s;
+	position: relative;
+}
+.heading h2 {
+	font-weight: 700;
+}
+.heading h2 span {
+	color: #14B1E2;
+}
+.features_blog img {
+	width: 30%;
+}
+.features_blog h2 {
+	margin: 20px 0;
+	transition: .5s;
+	font-size: 22px;
+}
+.hover_details {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	transform: translate(-50% , -50%);
+	opacity: 0;
+	transition: .5s;
+	padding: 20px;
+	text-align: center;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+.hover_details h2 {
+	margin: 0 0 20px;
+}
+.hover_details p {
+	width: 80%;
+	display: inline-block;
+	font-size: 14px;
+}
+.normal_details {
+	transition: .5s;
+}
+.features_blog:hover {
+	border-radius: 10px;
+	background: #4BB5D6;
+}
+.features_blog:hover .normal_details {
+	opacity: 0;	
+}
+.features_blog:hover .hover_details {
+	opacity: 1;	
+}
+
+
+.video_main {
+	background: #4BB5D6;
+	background-image: url(../img/video_bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 20%;
+	padding: 60px 0;
+	text-align: center;
+	position: relative;
+}
+.video_heading {
+	width: 60%;
+	display: inline-block;
+	color: #fff;
+	margin-bottom: 150px;
+}
+.video_heading h2 {
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+.video_heading p {
+	font-size: 14px;
+}
+
+
+.solution_main {
+	padding: 60px 0;
+}
+.solution_enner {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.solution_details {
+	width: 30%;
+}
+.solution_img {
+	width: 65%;
+}
+.solution_details h2 {
+	font-weight: 700;
+}
+.solution_details h2 span {
+	color: #14B1E2;
+}
+.solution_details p {
+	width: 100%;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+.solution_details button {
+	border: 1px solid #4BB5D6;
+	padding: 10px 30px;
+	background: #4BB5D6;
+	color: #fff !important;
+	border-radius: 5px;
+	transition: .5s;
+}
+.solution_details button:hover {
+	border: 1px solid #4BB5D6;
+	background: transparent;
+	color: #4BB5D6 !important;
+}
+
+
+.about_preskool_main {
+	padding: 60px 0;
+	overflow: hidden !important;
+}
+.about_preskool_blog {
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.about_slider {
+	width: 100%;
+	margin: 100px 0 40px;
+	padding: 0px;
+	text-align: center;
+	border-radius: 10px;
+	transition: .5s;
+	position: relative;
+}
+.about_preskool_blog .owl-item.center {
+	z-index: 999;
+}
+.about_preskool_blog .owl-item.center .item .about_slider {
+	position: relative;
+	z-index: 999;
+	margin-top: 40px !important;
+}
+.about_preskool_blog .owl-item.center .item .about_details {
+	background: #4BB5D6;	
+	color: #fff;
+	box-shadow: none;
+	transform: scale(1.3);
+	z-index: 99;
+	position: relative;
+}
+.about_preskool_blog .owl-item.active {
+	padding: 10px;
+}
+.about_preskool_blog .owl-stage-outer {
+/*	overflow: inherit !important;*/
+}
+.about_preskool_blog .owl-nav {
+	margin: 0 !important;
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+}
+.about_preskool_blog button.owl-prev , .about_preskool_blog button.owl-next {
+	position: relative;
+}
+.about_preskool_blog button.owl-prev:before {
+	content: "\f177";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	position: absolute;
+	top: 0;
+	left: -20px;
+	width: 20px;
+	height: 20px;
+	color: #000 !important;
+}
+.about_preskool_blog button.owl-next:before {
+	content: "\f178";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	position: absolute;
+	top: 0;
+	right: -20px;
+	width: 20px;
+	height: 20px;
+	color: #000 !important;
+
+}
+.about_preskool_blog button.owl-prev span , .about_preskool_blog button.owl-next span {
+	display: none !important;
+}
+.about_details {
+	box-shadow: 0px 0px 12px rgb(0 0 0 / 20%);
+	border-radius: 10px;
+	color: #000;
+	padding: 20px 40px 60px;
+	text-align: center;
+}
+.about_details p {
+	margin-top: 10px;
+	font-weight: 400;
+	font-size: 15px;
+}
+.about_profile {
+	margin-top: -24px;
+	position: relative;
+	z-index: 999;
+}
+.about_profile img {
+	margin-bottom: 30px;
+	width: 100px !important;
+	display: inline-block !important;
+}
+.profile_name h4 {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+.about_details img {
+	width: 70px !important;
+	display: inline-block !important;
+}
+
+
+.blogs {
+	background: #4BB5D6;
+	padding: 40px 0;
+}
+.blogs_enner {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.blogs_main {
+	text-align: center;
+}
+.blogs_main img {
+	width: 80px;
+}
+.blogs_main h4 {
+	color: #fff;
+	font-size: 22px;
+	margin-top: 20px;
+}
+
+
+
+.conpanies_main {
+	padding: 60px 0;
+}
+.logos_enner {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo_img {
+	width: 15%;
+}
+.logo_img img {
+	width: 100%;
+}
+
+
+footer {
+	background: #242424;
+}
+.our_update {
+	padding: 40px 0;
+	border-bottom: 1px solid #D9D9D999;
+}
+.footer_details {
+	padding: 40px 0;	
+}
+.our_update_heading {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.our_update_heading h4 {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.email_mn {
+	width: 50%;
+	background: #fff;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px;
+	border-radius: 8px;
+}
+.email_mn input {
+	width: 70%;
+	background: none;
+	outline: none;
+	border: none;
+	color: #000;
+	border-radius: 6px;
+	padding: 12px 10px;
+}
+.email_mn button {
+	background: #FCBA38;
+	outline: none;
+	border: none;
+	color: #fff;
+	border-radius: 6px;
+	padding: 12px 30px;
+	font-size: 16px !important;
+}
+
+.footer_details_enner {
+	display: inline-flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.footer_company_details {
+	width: 30%;
+}
+.footer_colume p {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 20px;
+}
+.footer_colume h5 {
+	color: #fff;
+	margin-bottom: 20px;
+}
+.footer_colume ul a {
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 10px;
+	display: inline-block;
+	font-size: 16px;
+}
+.footer_colume_details {
+	color: #fff !important;
+}
+.footer_colume_details i {
+	width: 15px;
+	margin-right: 10px;
+}
+.footer_colume_details a {
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 10px;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.follow_us {
+	margin-top: 40px;
+}
+.follow_us ul {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	list-style: none;
+}
+.follow_us ul li {
+	margin-right: 20px;
+}
+.follow_us ul a {
+	font-size: 20px;
+	margin: 0  !important;
+}
+.copyright_details {
+	background: #000;
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 14px;
+}
+
+
+.mobile_menu_search, .mobile_menu {
+	display: none;
+}
+.tab_details {
+	display: none;
+}
+
+
+@media (max-width: 1200px){
+	.logo_main {
+		width: 180px;
+	}
+	.header_menu ul li {
+		margin: 0 15px;
+	}
+	.about_details {
+		padding: 20px 20px 60px;
+	}	
+	.video {
+		width: 100%;
+	}
+	.video iframe {
+		width: 100%;
+	}
+}
+@media (max-width: 1024px){
+	.logo_main {
+		width: 20%;
+	}
+	.header_menu ul li {
+		margin: 0 15px;
+	}
+	.banenr_main {
+		height: 600px;
+	}
+	.banenr_enner {
+		width: 60% !important;
+	}
+	.heading p {
+		width: 70%;
+	}
+	.video_heading {
+		width: 70%;
+	}
+	.footer_company_details img {
+		width: 200px;
+	}
+	.email_mn {
+		width: 60%;
+	}
+	.email_mn button {
+		white-space: nowrap;
+	}
+}
+@media (max-width: 992px){
+	.key_features_blog > div {
+		width: 48%;
+	}
+	.features_blog {
+		height: auto !important;
+	}
+	.key_features_blog.desh_details {
+		display: none;
+	}
+	.features_blog h2{
+		width: 100%;
+	}
+	.footer_details_enner {
+		flex-wrap: wrap;
+	}
+	.footer_colume {
+		width: 50%;
+		margin: 40px 0;
+	}
+	.footer_company_details , .footer_contact_details {
+		width: 100% !important;
+	}
+	.tab_details {
+		display: inline-flex;
+	}
+	.mobile_menu_search{
+		display: block;
+	}
+	.mobile_menu  .header_menu , .mobile_menu .login_main {
+		display: block !important;
+	}
+	.mobile_menu  .header_menu ul {
+		display: flex !important;
+		flex-direction: column;
+	}
+	.mobile_menu .login_main ul {
+		display: inline-flex !important;
+		justify-content: center;
+		width: 100%;
+	}
+	.mobile_menu {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 50%;
+		background: #fff;
+		padding: 20px 15px 20px;
+		box-shadow: 0px 0px 20px rgb(0 0 0 / 20%);
+		transform: translateX(100%);
+		transition: .5s;
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: space-between;
+		z-index: 999;
+	}
+	.mobile_menu.show {
+		transform: translateX(0%);
+	}
+	li.search_icon {
+		display: none;
+	}
+	.mobile_menu .login_main ul li {
+		margin-top: 20px;
+	}
+	.close_icon {
+		margin-bottom: 40px !important;
+		text-align: right;
+		width: 100%;
+		font-size: 26px;
+		padding-right: 26px;
+		margin-top: 4px !important;
+	}
+	.mobile_menu_search ul {
+		list-style: none;
+	}
+	.mobile_menu_search ul li {
+		margin-left: 30px;
+		font-size: 24px;
+	}
+	.header_menu ul li a {
+		font-size: 18px;
+	}
+	.header_menu ul li {
+		margin: 10px 15px;
+	}
+	.mobile_menu_search li a {
+		color: #4BB5D6 !important;
+	}	
+	.header_menu , .login_main {
+		display: none;
+	}
+}
+@media (max-width: 768px){
+	.banenr_main {
+		height: auto;
+		padding: 50px 0;
+	}
+	.banenr_enner {
+		width: 65% !important;
+	}
+	.banenr_enner h2 {
+		font-size: 30px;
+	}
+	.key_features_main {
+		padding: 60px 0;
+	}
+	.heading p {
+		width: 90%;
+	}
+	.email_mn {
+		width: 100%;
+	}
+	.video {
+		width: 100%;
+	}
+	.video iframe {
+		width: 100%;
+	}
+	.solution_details {
+		width: 35%;
+	}
+	.blogs_enner {
+		flex-wrap: wrap;
+	}
+	.blogs_main {
+		width: 50%;
+		margin: 20px 0;
+	}
+	.footer_details_enner {
+		flex-wrap: wrap;
+	}
+	.footer_colume {
+		width: 50%;
+		margin: 40px 0;
+	}
+	.our_update_heading {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.our_update_heading h4 {
+		margin-bottom: 40px;
+	}
+	.footer_company_details , .footer_contact_details {
+		width: 100% !important;
+	}	
+	.key_features_blog > div {
+		width: 50%;
+	}
+	.about_preskool_blog .owl-item .item .about_slider {
+		margin-top: 60px !important;
+	}
+	.about_preskool_blog .owl-item.center .item .about_slider {
+		margin-top: 40px !important;
+	}	
+	.logos_enner {
+		flex-wrap: wrap;
+	}
+	.logo_img {
+		width: 22%;
+	}
+}
+@media (max-width: 767px){
+	.banenr_enner {
+		width: 100% !important;
+	}
+	.logo_main {
+		width: 160px;
+	}
+	.banenr_enner h2 {
+		font-size: 26px;
+	}
+	.key_features_main {
+		padding: 50px 0;
+	}
+	.heading p {
+		width: 100%;
+	}
+	.key_features_blog > div {
+		width: 100%;
+	}
+	.video_heading {
+		width: 100%;
+	}
+	.video_main {
+		padding: 30px 0 60px;
+	}
+	.solution_enner {
+		flex-wrap: wrap;
+	}
+	.solution_main {
+		padding: 40px 0;
+	}
+	.about_preskool_main {
+		padding: 40px 0;
+		overflow: hidden !important;
+	}
+	.solution_details {
+		margin-bottom: 50px;
+	}
+	.solution_details , .solution_img {
+		width: 100%;
+		text-align: center;
+	}
+	.blogs_main {
+		width: 50%;
+	}
+	.about_preskool_blog .owl-item .item .about_slider , .about_preskool_blog .owl-item.center .item .about_slider {
+		margin-top: 0px !important;
+	}
+	.about_preskool_blog .owl-item.active {
+		padding: 0px; 
+	}
+	.about_preskool_blog .owl-item.center .item .about_details {
+		transform: scale(1.0);
+	}
+	.about_details {
+		padding: 20px 20px 60px;
+	}
+	.conpanies_main {
+		padding: 40px 0;
+	}
+	.logos_enner {
+		flex-wrap: wrap;
+	}
+	.logo_img {
+		width: 48%;
+	}
+	.our_update {
+		padding: 30px 0;
+	}
+	.our_update_heading h4 {
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+	.email_mn input {
+		padding: 6px 5px;
+	}
+	.email_mn button {
+		padding: 8px 10px;
+	}
+	.footer_details {
+		padding: 0px 0 40px;
+	}
+	.footer_colume.footer_company_details {
+		margin-bottom: 0 !important;
+	}
+	.footer_colume.footer_contact_details {
+		margin: 0 !important;
+	}
+	.copyright_details {
+		font-size: 12px;
+		padding: 14px 0;
+	}
+	.heading h2 {
+		text-align: center;
+	}
+	.mobile_menu {
+		width: 80%;
+	}
+	.close_icon {
+		padding: 0 !important;
+	}
+	.hover_details p {
+		width: 100%;
+	}
+}
+@media (max-width: 576px){
+	.blogs_main {
+		width: 100%;
+	}
+}
+@media (max-width: 400px){
+	.footer_colume {
+		width: 100%;
+	}
+	.footer_colume:nth-child(2) {
+		margin-bottom: 0;
+	}
+}
